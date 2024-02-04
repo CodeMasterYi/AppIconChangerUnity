@@ -41,30 +41,30 @@ namespace AppIconChanger.Editor
                 var sourceTexture = TextureAssetUtils.ProcessTexture(alternateIcon.source);
                 if (PlayerSettings.iOS.targetDevice == iOSTargetDevice.iPhoneOnly || PlayerSettings.iOS.targetDevice == iOSTargetDevice.iPhoneAndiPad)
                 {
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPhoneNotification40px, 40, Path.Combine(iconDirectoryPath, "iPhoneNotification40px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPhoneNotification60px, 60, Path.Combine(iconDirectoryPath, "iPhoneNotification60px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPhoneSettings58px, 58, Path.Combine(iconDirectoryPath, "iPhoneSettings58px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPhoneSettings87px, 87, Path.Combine(iconDirectoryPath, "iPhoneSettings87px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPhoneSpotlight80px, 80, Path.Combine(iconDirectoryPath, "iPhoneSpotlight80px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPhoneSpotlight120px, 120, Path.Combine(iconDirectoryPath, "iPhoneSpotlight120px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPhoneApp120px, 120, Path.Combine(iconDirectoryPath, "iPhoneApp120px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPhoneApp180px, 180, Path.Combine(iconDirectoryPath, "iPhoneApp180px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPhoneNotification40px), 40, Path.Combine(iconDirectoryPath, "iPhoneNotification40px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPhoneNotification60px), 60, Path.Combine(iconDirectoryPath, "iPhoneNotification60px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPhoneSettings58px), 58, Path.Combine(iconDirectoryPath, "iPhoneSettings58px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPhoneSettings87px), 87, Path.Combine(iconDirectoryPath, "iPhoneSettings87px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPhoneSpotlight80px), 80, Path.Combine(iconDirectoryPath, "iPhoneSpotlight80px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPhoneSpotlight120px), 120, Path.Combine(iconDirectoryPath, "iPhoneSpotlight120px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPhoneApp120px), 120, Path.Combine(iconDirectoryPath, "iPhoneApp120px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPhoneApp180px), 180, Path.Combine(iconDirectoryPath, "iPhoneApp180px.png"));
                 }
 
                 if (PlayerSettings.iOS.targetDevice == iOSTargetDevice.iPadOnly || PlayerSettings.iOS.targetDevice == iOSTargetDevice.iPhoneAndiPad)
                 {
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPadNotifications20px, 20, Path.Combine(iconDirectoryPath, "iPadNotifications20px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPadNotifications40px, 40, Path.Combine(iconDirectoryPath, "iPadNotifications40px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPadSettings29px, 29, Path.Combine(iconDirectoryPath, "iPadSettings29px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPadSettings58px, 58, Path.Combine(iconDirectoryPath, "iPadSettings58px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPadSpotlight40px, 40, Path.Combine(iconDirectoryPath, "iPadSpotlight40px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPadSpotlight80px, 80, Path.Combine(iconDirectoryPath, "iPadSpotlight80px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPadApp76px, 76, Path.Combine(iconDirectoryPath, "iPadApp76px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPadApp152px, 152, Path.Combine(iconDirectoryPath, "iPadApp152px.png"));
-                    SaveIcon(alternateIcon.type, sourceTexture, alternateIcon.iPadProApp167px, 167, Path.Combine(iconDirectoryPath, "iPadProApp167px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPadNotifications20px), 20, Path.Combine(iconDirectoryPath, "iPadNotifications20px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPadNotifications40px), 40, Path.Combine(iconDirectoryPath, "iPadNotifications40px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPadSettings29px), 29, Path.Combine(iconDirectoryPath, "iPadSettings29px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPadSettings58px), 58, Path.Combine(iconDirectoryPath, "iPadSettings58px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPadSpotlight40px), 40, Path.Combine(iconDirectoryPath, "iPadSpotlight40px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPadSpotlight80px), 80, Path.Combine(iconDirectoryPath, "iPadSpotlight80px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPadApp76px), 76, Path.Combine(iconDirectoryPath, "iPadApp76px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPadApp152px), 152, Path.Combine(iconDirectoryPath, "iPadApp152px.png"));
+                    SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.iPadProApp167px), 167, Path.Combine(iconDirectoryPath, "iPadProApp167px.png"));
                 }
 
-                SaveIcon(alternateIcon.type, alternateIcon.source, alternateIcon.appStore1024px, 1024, Path.Combine(iconDirectoryPath, "appStore1024px.png"));
+                SaveIcon(alternateIcon.type, sourceTexture, TextureAssetUtils.ProcessTexture(alternateIcon.appStore1024px), 1024, Path.Combine(iconDirectoryPath, "appStore1024px.png"));
             }
 
             var pbxProjectPath = Path.Combine(pathToBuiltProject, "Unity-iPhone.xcodeproj", "project.pbxproj");
