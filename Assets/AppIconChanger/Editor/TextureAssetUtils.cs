@@ -6,7 +6,17 @@ namespace AppIconChanger.Editor
 {
     internal static class TextureAssetUtils
     {
-        public static bool VerifyTextureByType(Texture2D texture, out List<string> errors, bool needsAlpha = true, int minSize = 1024)
+        public static bool VerifyTexture(Texture2D texture, out List<string> errors)
+        {
+            return VerifyTexture(texture, 1024, true, out errors);
+        }
+
+        public static bool VerifyTexture(Texture2D texture, int minSize, out List<string> errors)
+        {
+            return VerifyTexture(texture, minSize, true, out errors);
+        }
+
+        public static bool VerifyTexture(Texture2D texture, int minSize, bool needsAlpha, out List<string> errors)
         {
             errors = new List<string>();
 
@@ -17,7 +27,6 @@ namespace AppIconChanger.Editor
             }
 
             var isSquare = texture.width == texture.height;
-            var isLargeEnough = texture.width >= minSize && texture.height > minSize;
             var assetPath = AssetDatabase.GetAssetPath(texture);
             var textureImporter = AssetImporter.GetAtPath(assetPath) as TextureImporter;
             var hasAlpha = true;
@@ -36,6 +45,7 @@ namespace AppIconChanger.Editor
                 errors.Add("Read/Write is not enabled in the texture importer");
             }
 
+            var isLargeEnough = texture.width >= minSize && texture.height >= minSize;
             if (!isLargeEnough)
                 errors.Add(string.Format("Texture must be at least {0}x{1} pixels (while it's {2}x{3})",
                     minSize,

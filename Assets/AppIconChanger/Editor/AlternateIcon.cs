@@ -32,6 +32,7 @@ namespace AppIconChanger.Editor
         public Texture2D iPadApp152px;
         public Texture2D iPadProApp167px;
         public Texture2D appStore1024px;
+        public bool isValid;
 
         [MenuItem("Assets/Create/AppIconChanger/AlternateIcon from Selection...")]
         private static void CreateAlternateIconFromSelection()
@@ -66,9 +67,10 @@ namespace AppIconChanger.Editor
                     basePath = AssetDatabase.GenerateUniqueAssetPath(basePath);
                 }
 
-                var icon = ScriptableObject.CreateInstance<AlternateIcon>();
+                var icon = CreateInstance<AlternateIcon>();
                 icon.iconName = filename;
                 icon.source = tex;
+                icon.isValid = TextureAssetUtils.VerifyTexture(tex, out _);
                 if (overwrite)
                 {
                     AssetDatabase.DeleteAsset(basePath);
